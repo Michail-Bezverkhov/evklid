@@ -85,7 +85,7 @@ ul {
   --padding-container: 0 75px;
   --padding-header: 14px 0px;
   --margin-in-nav: 85px;
-  --section-offset: 50px;
+  --section-offset: 25px;
   --hero-padding: 100px 77px;
   --about-items-margin: 32px;
   /* colors */
@@ -165,19 +165,23 @@ img {
 .h3-title {
   font-weight: 700;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 32px;
   color: var(--color-10);
 }
 
 /* header */
 .header {
-  padding: var(--padding-header);
+  padding-bottom: var(--section-offset);
+}
+
+.header__container {
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
   border-radius: 0px 0px 32px 32px;
   background: var(--bg-header);
 }
 
 .header__content {
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -278,7 +282,7 @@ img {
 }
 
 .hero__text {
-  width: 55%;
+  max-width: 820px;
   margin-bottom: 90px;
 }
 
@@ -318,12 +322,13 @@ img {
 
 /* about */
 .about {
+  padding-top: var(--section-offset);
   padding-bottom: calc(var(--section-offset) * 2);
 }
 
 .about__text {
   max-width: 1235px;
-  margin-bottom: var(--section-offset);
+  margin-bottom: 50px;
 }
 
 .about__title {
@@ -334,14 +339,14 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 622px;
 }
 
 .about__item-picture {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 622px;
-  width: 49%;
+  width: calc(50% - 16px);
   border-radius: 32px;
   background-image: url('../img/about-picture.jpg');
   background-size: cover;
@@ -362,8 +367,7 @@ img {
 }
 
 .about__picture-descr {
-  max-width: 60%;
-  margin-right: 1%;
+  max-width: 59%;
   font-weight: 700;
   color: var(--color-5);
 }
@@ -393,10 +397,11 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 49%;
+  width: calc(50% - 16px);
 }
 
 .about__item {
+  height: calc(50% - 16px);
   padding: 7.5% 5.7% 7.5% 34.2%;
   background: var(--color-5);
   border: 1px solid var(--color-6);
@@ -425,16 +430,17 @@ img {
 
 /* how */
 .how {
-  padding-bottom: calc(var(--section-offset) * 2.2);
+  padding-top: calc(var(--section-offset) * 2);
+  padding-bottom: calc(var(--section-offset) * 2);
 }
 
 .how__title {
-  margin-bottom: 46px;
+  margin-bottom: 50px;
 }
 
 .how__list {
   display: flex;
-  margin-bottom: 52px;
+  margin-bottom: 50px;
 }
 
 .how__item {
@@ -473,15 +479,18 @@ img {
 }
 
 .how__content-left {
-  width: 49%;
+  margin-right: 50px;
 }
 
 .how__content-title {
-  margin-bottom: 11px;
+  margin-bottom: 8px;
 }
 
 .how__content-descr {
-  max-width: 758px;
+  max-width: 720px;
+}
+
+.how__content-descr:last-of-type {
   margin-bottom: 18px;
 }
 
@@ -531,7 +540,8 @@ img {
 }
 
 .how__image {
-  width: 49%;
+  width: 862px;
+  height: auto;
   border-radius: 32px;
   background-image: url('../img/how-pic1.jpg');
   background-repeat: no-repeat;
@@ -541,7 +551,12 @@ img {
 
 /* faq */
 .faq {
+  padding-top: calc(var(--section-offset) * 2);
   padding-bottom: calc(var(--section-offset) * 2);
+}
+
+.faq__container {
+  padding-top: 11px;
 }
 
 .faq__title {
@@ -552,11 +567,11 @@ img {
   font-size: 0;
 }
 
-.faq__link {
+.faq__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 29px 0;
   border-top: 1px solid var(--color-6);
   border-bottom: 1px solid var(--color-6);
   border-collapse: collapse;
@@ -565,14 +580,22 @@ img {
   line-height: 32px;
 }
 
-.faq__link:hover,
-.faq__link:focus {
+.faq__item:hover,
+.faq__item:focus {
   border-color: var(--color_orange);
+}
+
+.faq__link {
+  max-width: 80%;
 }
 
 /* footer */
 
 .footer {
+  padding-top: calc(var(--section-offset) * 2);
+}
+
+.footer__container {
   background-color: var(--color-10);
 }
 
@@ -621,8 +644,8 @@ img {
 }
 
 .footer__social-link {
-	width: 60px;
-	height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .footer__social-link svg {
@@ -706,6 +729,11 @@ img {
   color: var(--color-5);
 }
 
+.footer__form-wrap-buttons {
+  display: flex;
+  align-items: center;
+}
+
 .footer__form-btn {
   padding: 19px 51px;
   margin-right: 18px;
@@ -726,10 +754,17 @@ img {
 
 .footer__form-checkbox {
   color: var(--color-6);
+  text-align: center;
 }
 
 .footer__descr {
   max-width: 357px;
   padding-right: 7px;
   color: var(--color-6);
+}
+
+
+/* -------------------------------------------------------- */
+.burger {
+  display: none;
 }
