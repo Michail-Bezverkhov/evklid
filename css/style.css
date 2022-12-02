@@ -80,7 +80,7 @@ ul {
   font-display: swap;
 }
 
-
+/* ---------------------GLOBAL------------------------ */
 :root {
   --padding-container: 0 75px;
   --padding-header: 14px 0px;
@@ -100,8 +100,6 @@ ul {
   --color-9: #414141;
   --color-10: #000000;
 }
-
-/* glob */
 
 body {
   min-width: 320px;
@@ -169,7 +167,7 @@ img {
   color: var(--color-10);
 }
 
-/* header */
+/* ---------------------HEADER------------------------ */
 .header {
   padding-bottom: var(--section-offset);
 }
@@ -265,7 +263,7 @@ img {
   outline: none;
 }
 
-/* hero */
+/* ---------------------HERO------------------------ */
 .hero {
   padding-top: var(--section-offset);
   padding-bottom: var(--section-offset);
@@ -320,7 +318,7 @@ img {
   background-color: var(--color-3);
 }
 
-/* about */
+/* ---------------------ABOUT------------------------ */
 .about {
   padding-top: var(--section-offset);
   padding-bottom: calc(var(--section-offset) * 2);
@@ -392,7 +390,6 @@ img {
   border-color: var(--color-3);
 }
 
-
 .about__list {
   display: flex;
   flex-direction: column;
@@ -428,7 +425,7 @@ img {
   background-image: url(../img/about-2nd.svg);
 }
 
-/* how */
+/* ---------------------HOW------------------------ */
 .how {
   padding-top: calc(var(--section-offset) * 2);
   padding-bottom: calc(var(--section-offset) * 2);
@@ -440,7 +437,7 @@ img {
 
 .how__list {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 46px;
 }
 
 .how__item {
@@ -549,10 +546,10 @@ img {
   background-position: center;
 }
 
-/* faq */
+/* ---------------------FAQ------------------------ */
 .faq {
   padding-top: calc(var(--section-offset) * 2);
-  padding-bottom: calc(var(--section-offset) * 2);
+  padding-bottom: calc(var(--section-offset) * 1.9);
 }
 
 .faq__container {
@@ -571,7 +568,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 29px 0;
+  padding: 30px 0;
   border-top: 1px solid var(--color-6);
   border-bottom: 1px solid var(--color-6);
   border-collapse: collapse;
@@ -589,10 +586,10 @@ img {
   max-width: 80%;
 }
 
-/* footer */
+/* ---------------------FOOTER------------------------ */
 
 .footer {
-  padding-top: calc(var(--section-offset) * 2);
+  padding-top: calc(var(--section-offset) * 1.9);
 }
 
 .footer__container {
@@ -763,8 +760,11 @@ img {
   color: var(--color-6);
 }
 
-
-/* -------------------------------------------------------- */
+/* -----------------LOW-RESOLUTION----------------- */
 .burger {
+  display: none;
+}
+
+.about__item-picture-text {
   display: none;
 }
