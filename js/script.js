@@ -8,9 +8,9 @@ const swiper = new Swiper('.swiper', {
     type: 'bullets',
     clickable: true,
   },
-  // autoplay: {
-  //   delay: 3000,
-  // },
+  autoplay: {
+    delay: 3000,
+  },
   slideClass: 'hero__slide',
   wrapperClass: 'hero__swiper-wrapper',
 });

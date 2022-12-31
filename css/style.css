@@ -265,7 +265,8 @@ img {
 }
 
 .header__search-btn:focus {
-  outline: none;
+  outline: 2px solid var(--color-1);
+  outline-offset: 4px;
 }
 
 .header__search-btn:focus .header__search-icon path {
@@ -302,10 +303,6 @@ img {
 }
 
 .header__search-btn:active {
-  outline: none;
-}
-
-.header__search--active .header__search-btn {
   outline: none;
 }
 
@@ -389,6 +386,11 @@ img {
 
 .header__search-cancel:focus svg circle {
   stroke: var(--color-1);
+}
+
+.header__search-cancel:focus {
+  outline: 2px solid var(--color-1);
+  outline-offset: 4px;
 }
 
 .header__search-cancel:active {
@@ -1030,8 +1032,11 @@ img {
 }
 
 .footer__form-checkbox {
-  color: var(--color-6);
   text-align: center;
+  color: var(--color-6);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 .footer__descr {
